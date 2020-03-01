@@ -1,0 +1,33 @@
+<h1>Contact us</h1>
+<section>
+    <form [formGroup]="myForm" (ngSubmit)="postData()">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" class="form-control" name="name"/>
+        <div *ngIf="myForm.controls.name.invalid && myForm.controls.name.touched" class="alert alert-danger">
+          <div *ngIf="myForm.controls.name.errors.required"> Name is required </div>
+          <div *ngIf="myForm.controls.name.errors.pattern">Only alphabate allow</div>
+        </div>
+      </div>
+      <div class ="form-group">
+        <label>Mobile Number</label>
+        <input type="text" formControlName="mn" class="form-control" name="mn"/>
+        <div *ngIf="myForm.controls.mn.invalid && myForm.controls.mn.touched" class="alert alert-danger">
+          <div *ngIf="myForm.controls.mn.errors.pattern">
+            Only alphabate allow
+          </div>
+        </div>
+      </div>
+
+      <div class ="form-group">
+        <label>Age</label>
+        <input type="text" formControlName="age" class="form-control" name="age"/>
+        <div *ngIf="myForm.controls.age.invalid && myForm.controls.age.touched" class="alert alert-danger">
+          <div *ngIf="myForm.controls.age.errors.myEr">
+            Age range between 18 to 50
+          </div>
+        </div>
+      </div>
+    <input type="submit" value="submit" class="btn btn-success" [disabled]="myForm.invalid"/>
+  </form>
+  </section>

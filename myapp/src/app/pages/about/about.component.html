@@ -1,0 +1,5 @@
+<h2>Latest News</h2>
+<div *ngFor="let n of newsData|mypipe:5">
+    <h3>{{n.title}}</h3>
+    <p>{{n.description}}</p>
+</div>

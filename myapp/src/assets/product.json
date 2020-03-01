@@ -1,0 +1,10 @@
+[
+    {"id":1 , "pname":"xyz","price":34567},
+    {"id":2 , "pname":"abc","price":44567},
+    {"id":3 , "pname":"zxc","price":24567},
+    {"id":4 , "pname":"xyz1","price":345672},
+    {"id":5 , "pname":"abc2","price":445675},
+    {"id":6 , "pname":"zxc3","price":245670}
+    
+ 
+]

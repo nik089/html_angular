@@ -1,0 +1,44 @@
+<div class="limiter">
+  <div class="container-login100">
+      <div class="wrap-login100">
+          <form [formGroup]="myForm" (ngSubmit)="postData()" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+              <span class="login100-form-title">
+                  Login
+              </span>
+
+              <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+                  <input class="input100" type="text" formControlName="Username" name="Username" placeholder="Username">
+                  <span class="focus-input100"></span>
+                  </div>
+                  <div *ngIf="myForm.controls.Username.invalid && myForm.controls.Username.touched" class="alert alert-danger user-alert" >
+                      <div *ngIf="myForm.controls.Username.errors.required">
+                       Username is required
+
+                       </div>
+                     </div>
+                     <br><br>
+                     <div class="wrap-input100 validate-input" data-validate = "Please enter password">
+                  <input class="input100" type="password" formControlName="pass" name="pass" placeholder="Password">
+
+                  <span class="focus-input100"></span>
+
+              </div>
+              <br>
+                  <div *ngIf="myForm.controls.pass.invalid && myForm.controls.pass.touched" class="alert alert-danger pass-alert">
+
+                      <div *ngIf="myForm.controls.pass.errors.required">
+
+                        Password is required
+                     </div>
+                     </div>
+              <br>
+
+              <div class="container-login100-form-btn">
+                  <input class="login100-form-btn" type="submit" value="Login"/>
+              </div>
+
+              <br><br><br><br><br>
+          </form>
+      </div>
+  </div>
+</div>
